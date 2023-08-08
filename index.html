@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Notas</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Notas</h1>
+        <label for="nota1">Digite a primeira nota:</label>
+        <input type="number" id="nota1"><br>
+
+        <label for="nota2">Digite a segunda nota:</label>
+        <input type="number" id="nota2"><br>
+
+        <label for="nota3">Digite a terceira nota:</label>
+        <input type="number" id="nota3"><br>
+
+        <button onclick="calcularMedia()">Média</button>
+        <div id="resultado"></div>
+        <img src="44.png" alt="foto do algoritmo 44">
+        <img src="execução.png" alt="foto do algoritmo 44">
+        <img src="java.png" alt="foto do codigo em java">
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function calcularMedia() {
+            var nota1 = parseFloat(document.getElementById("nota1").value);
+            var nota2 = parseFloat(document.getElementById("nota2").value);
+            var nota3 = parseFloat(document.getElementById("nota3").value);
+
+            var media = (nota1 + nota2 + nota3) / 3;
+
+            var resultado = document.getElementById("resultado");
+
+            if (media >= 7) {
+                resultado.textContent = "Aprovado! Média: " + media;
+            } else if (media < 5) {
+                resultado.textContent = "Reprovado! Média: " + media;
+            } else {
+                resultado.textContent = "Recuperação! Média: " + media;
+            }
+        }
+    </script>
+</body>
+
+</html
